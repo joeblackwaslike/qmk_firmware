@@ -28,11 +28,12 @@ def system_libs(binary: str) -> List[Path]:
     if binary.endswith("gcc") or binary.endswith("g++"):
         # (TODO): Remove 'stdin' once 'input' no longer causes issues under MSYS
         result = cli.run([binary, '-E', '-Wp,-v', '-'], capture_output=True, check=True, stdin=None, input='\n')
-        paths = []
-        for line in result.stderr.splitlines():
-            if line.startswith(" "):
-                paths.append(Path(line.strip()).resolve())
-        return paths
+        return [
+            Path(line.strip()).resolve()
+            for line in result.stderr.splitlines()
+            if line.startswith(" ")
+        ]
+
 
     return list(Path(bin_path).resolve().parent.parent.glob("*/include")) if bin_path else []
 
@@ -99,7 +100,7 @@ def generate_compilation_database(cli: MILC) -> Union[bool, int]:
         command = create_make_command(current_keyboard, current_keymap, dry_run=True)
     elif not current_keyboard:
         cli.log.error('Could not determine keyboard!')
-    elif not current_keymap:
+    else:
         cli.log.error('Could not determine keymap!')
 
     if not command:

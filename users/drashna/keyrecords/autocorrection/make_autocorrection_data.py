@@ -94,7 +94,7 @@ def parse_file(file_name: str) -> List[Tuple[str, str]]:
         continue
 
       # Check that `typo` is valid.
-      if not(all([ord('a') <= ord(c) <= ord('z') or c == ':' for c in typo])):
+      if not all(ord('a') <= ord(c) <= ord('z') or c == ':' for c in typo):
         print(f'Error:{line_number}: Typo "{typo}" has '
               'characters other than a-z and :.')
         sys.exit(1)
@@ -266,8 +266,8 @@ def main(argv):
   autocorrections = parse_file(dict_file)
   trie = make_trie(autocorrections)
   data = serialize_trie(autocorrections, trie)
-  print(f'Processed %d autocorrection entries to table with %d bytes.'
-        % (len(autocorrections), len(data)))
+  print(('Processed %d autocorrection entries to table with %d bytes.' %
+         (len(autocorrections), len(data))))
   write_generated_code(autocorrections, data, 'autocorrection_data.h')
 
 if __name__ == '__main__':
