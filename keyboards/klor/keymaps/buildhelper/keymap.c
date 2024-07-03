@@ -99,6 +99,8 @@ void keyboard_post_init_user(void) {
     rgblight_enable_noeeprom();
     rgblight_sethsv_noeeprom(35, 255, 255); // set default RGB color to yellow
   #endif //RGB_MATRIX_ENABLE
+  debug_enable=true;
+  debug_matrix=true;
 }
 
 

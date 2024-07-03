@@ -5,9 +5,9 @@ see https://docs.qmk.fm/#/feature_split_keyboard?id=setting-handedness
 for more options.
 */
 
-#define MASTER_LEFT
+// #define MASTER_LEFT
 // #define MASTER_RIGHT
-
+#define EE_HANDS
 //#define TAPPING_TERM 170
 #define TAPPING_TERM 170
 
@@ -82,3 +82,12 @@ for more options.
 //#    define ENABLE_RGB_MATRIX_SOLID_SPLASH
 #    define ENABLE_RGB_MATRIX_SOLID_MULTISPLASH
 #endif
+
+#define SERIAL_DEBUG
+
+#define NO_USB_STARTUP_CHECK
+// #define SPLIT_USB_DETECT
+#define SPLIT_USB_TIMEOUT 5000
+#define SPLIT_USB_TIMEOUT_POLL 10
+#define SPLIT_WATCHDOG_ENABLE
+#define SPLIT_WATCHDOG_TIMEOUT 5001

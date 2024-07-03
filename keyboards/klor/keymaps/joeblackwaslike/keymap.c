@@ -387,6 +387,8 @@ void keyboard_post_init_user(void) {
   #if HAPTIC_ENABLE
     haptic_disable(); // disables per key haptic feedback by default
   #endif //HAPTIC ENABLE
+  debug_enable=true;
+  debug_matrix=true;
 }
 
 

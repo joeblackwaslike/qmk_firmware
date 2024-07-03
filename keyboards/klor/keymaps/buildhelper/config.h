@@ -5,30 +5,27 @@ see https://docs.qmk.fm/#/feature_split_keyboard?id=setting-handedness
 for more options.
 */
 
-#define MASTER_LEFT
-// #define MASTER_RIGHT
-
 
 //#define TAPPING_TERM 170
-#define TAPPING_TERM 170
-
+// #define TAPPING_TERM 170
+#define EE_HANDS
 
 
 // Enable rapid switch from tap to hold, disables double tap hold auto-repeat.
-#define TAPPING_FORCE_HOLD
+// #define TAPPING_FORCE_HOLD
 
 // Auto Shift
 #define NO_AUTO_SHIFT_ALPHA
 #define AUTO_SHIFT_TIMEOUT TAPPING_TERM
 #define AUTO_SHIFT_NO_SETUP
 
-#undef LOCKING_SUPPORT_ENABLE
-#undef LOCKING_RESYNC_ENABLE
+// #undef LOCKING_SUPPORT_ENABLE
+// #undef LOCKING_RESYNC_ENABLE
 #define NO_ACTION_ONESHOT
 //#define NO_ACTION_TAPPING
 //#define NO_MUSIC_MODE
 
-#define COMBO_COUNT 1
+// #define COMBO_COUNT 1
 
 
 #ifdef POINTING_DEVICE_ENABLE
@@ -94,4 +91,11 @@ for more options.
 #    define ENABLE_RGB_MATRIX_SOLID_MULTISPLASH
 #endif
 
+#define SERIAL_DEBUG
 
+// #define NO_USB_STARTUP_CHECK
+// #define SPLIT_USB_DETECT
+// #define SPLIT_USB_TIMEOUT 5000
+// #define SPLIT_USB_TIMEOUT_POLL 10
+// #define SPLIT_WATCHDOG_ENABLE
+// #define SPLIT_WATCHDOG_TIMEOUT 5001

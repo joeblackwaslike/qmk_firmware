@@ -16,7 +16,7 @@
  */
 
 //#pragma once
-#include "quantum.h"
+// #include "quantum.h"
 
 /* This a shortcut to help you visually see your layout.
  *
@@ -28,9 +28,9 @@
  */
 
 // readability
-#define ___ KC_NO
+// #define ___ KC_NO
 
-
+/*
 #define LAYOUT_polydactyl(                                                 \
          L01, L02, L03, L04, L05,           R00, R01, R02, R03, R04,       \
     L10, L11, L12, L13, L14, L15,           R10, R11, R12, R13, R14, R15,  \
@@ -105,3 +105,4 @@
 
 
 #define LAYOUT LAYOUT_polydactyl
+*/

@@ -517,10 +517,10 @@ int layerstate = 0;
 layer_state_t layer_state_set_kb(layer_state_t state) {
       switch (get_highest_layer(layer_state | default_layer_state)) {
             case 0:
-                strcpy ( layer_state_str, "BASE COLEMAK");
+                strcpy ( layer_state_str, "BASE QWERTY");
                 break;
             case 1:
-                strcpy ( layer_state_str, "BASE QWERTY");
+                strcpy ( layer_state_str, "BASE COLEMAK");
                 break;
             case 2:
                 strcpy ( layer_state_str, "LOWER");
@@ -611,9 +611,9 @@ bool oled_task_kb(void) {
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case SHT_T:
-            return TAPPING_TERM - 150;
+            return TAPPING_TERM - 50;
         case SHT_N:
-            return TAPPING_TERM - 150;
+            return TAPPING_TERM - 50;
         default:
             return TAPPING_TERM;
     }
@@ -654,6 +654,14 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 // ┌───────────────────────────────────────────────────────────┐
 // │ l a y e r                                                 │
 // └───────────────────────────────────────────────────────────┘
+        case QWERTY:
+            if (record->event.pressed) {
+                set_single_persistent_default_layer(_QWERTY);
+                #ifdef HAPTIC_ENABLE
+                  drv2605l_pulse(DRV2605L_EFFECT_TRANSITION_HUM_1_100);
+                #endif // HAPTIC_ENABLE
+            }
+            return false;
 
         case COLEMAK:
             if (record->event.pressed) {
@@ -663,14 +671,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 #endif // HAPTIC_ENABLE
             }
             return false;
-        case QWERTY:
-            if (record->event.pressed) {
-                set_single_persistent_default_layer(_QWERTY);
-                #ifdef HAPTIC_ENABLE
-                  drv2605l_pulse(DRV2605L_EFFECT_TRANSITION_HUM_1_100);
-                #endif // HAPTIC_ENABLE
-            }
-            return false;
+
         case LOWER:
             if (record->event.pressed) {
                 layer_on(_LOWER);

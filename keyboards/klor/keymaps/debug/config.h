@@ -4,28 +4,47 @@
 see https://docs.qmk.fm/#/feature_split_keyboard?id=setting-handedness
 for more options.
 */
+// #define EE_HANDS
 
-#define MASTER_LEFT
-// #define MASTER_RIGHT
+#define SERIAL_DEBUG
 
-//#define TAPPING_TERM 170
-#define TAPPING_TERM 170
+// #define NO_USB_STARTUP_CHECK
+// #define SPLIT_USB_DETECT
+// #define SPLIT_USB_TIMEOUT 5000
+// #define SPLIT_USB_TIMEOUT_POLL 10
+// #define SPLIT_WATCHDOG_ENABLE
+// #define SPLIT_WATCHDOG_TIMEOUT 5001
 
-// Enable rapid switch from tap to hold, disables double tap hold auto-repeat.
-#define TAPPING_FORCE_HOLD
+// #define USE_SERIAL
+// #define SOFT_SERIAL_PIN D1
+// #define SERIAL_USE_MULTI_TRANSACTION
+
+// #define SPLIT_LAYER_STATE_ENABLE
+// #define SPLIT_LED_STATE_ENABLE
+// #define SPLIT_MODS_ENABLE
+// #define SPLIT_OLED_ENABLE
+// #define SPLIT_HAPTIC_ENABLE
+// #define SPLIT_ACTIVITY_ENABLE
+// #define RGBLIGHT_SPLIT
+// #define SPLIT_WATCHDOG_ENABLE
+// #define SPLIT_USB_DETECT
+
+// #define USB_VBUS_PIN GP24
+// #define USB_VBUS_PIN GP28
+// #define SPLIT_HAND_PIN GP22
 
 // Auto Shift
-#define NO_AUTO_SHIFT_ALPHA
-#define AUTO_SHIFT_TIMEOUT TAPPING_TERM
-#define AUTO_SHIFT_NO_SETUP
+// #define NO_AUTO_SHIFT_ALPHA
+// #define AUTO_SHIFT_TIMEOUT TAPPING_TERM
+// #define AUTO_SHIFT_NO_SETUP
 
-#undef LOCKING_SUPPORT_ENABLE
-#undef LOCKING_RESYNC_ENABLE
-#define NO_ACTION_ONESHOT
+// #undef LOCKING_SUPPORT_ENABLE
+// #undef LOCKING_RESYNC_ENABLE
+// #define NO_ACTION_ONESHOT
 //#define NO_ACTION_TAPPING
 //#define NO_MUSIC_MODE
 
-#define COMBO_COUNT 1
+// #define COMBO_COUNT 1
 
 
 // RGB matrix support
@@ -83,29 +102,5 @@ for more options.
 #    define ENABLE_RGB_MATRIX_SOLID_MULTISPLASH
 #endif
 
-#define SERIAL_DEBUG
 
-#define NO_USB_STARTUP_CHECK
-#define SPLIT_USB_DETECT
-#define SPLIT_USB_TIMEOUT 5000
-#define SPLIT_USB_TIMEOUT_POLL 10
-#define SPLIT_WATCHDOG_ENABLE
-#define SPLIT_WATCHDOG_TIMEOUT 5001
 
-// #define USE_SERIAL
-// #define SOFT_SERIAL_PIN D1
-// #define SERIAL_USE_MULTI_TRANSACTION
-
-// #define SPLIT_LAYER_STATE_ENABLE
-// #define SPLIT_LED_STATE_ENABLE
-// #define SPLIT_MODS_ENABLE
-// #define SPLIT_OLED_ENABLE
-// #define SPLIT_HAPTIC_ENABLE
-// #define SPLIT_ACTIVITY_ENABLE
-// #define RGBLIGHT_SPLIT
-// #define SPLIT_WATCHDOG_ENABLE
-// #define SPLIT_USB_DETECT
-
-// #define USB_VBUS_PIN GP24
-// #define USB_VBUS_PIN GP28
-// #define SPLIT_HAND_PIN GP22
