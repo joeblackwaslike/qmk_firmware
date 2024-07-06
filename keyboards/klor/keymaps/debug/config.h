@@ -15,36 +15,10 @@ for more options.
 // #define SPLIT_WATCHDOG_ENABLE
 // #define SPLIT_WATCHDOG_TIMEOUT 5001
 
-// #define USE_SERIAL
-// #define SOFT_SERIAL_PIN D1
 // #define SERIAL_USE_MULTI_TRANSACTION
 
-// #define SPLIT_LAYER_STATE_ENABLE
-// #define SPLIT_LED_STATE_ENABLE
-// #define SPLIT_MODS_ENABLE
-// #define SPLIT_OLED_ENABLE
-// #define SPLIT_HAPTIC_ENABLE
-// #define SPLIT_ACTIVITY_ENABLE
-// #define RGBLIGHT_SPLIT
 // #define SPLIT_WATCHDOG_ENABLE
 // #define SPLIT_USB_DETECT
-
-// #define USB_VBUS_PIN GP24
-// #define USB_VBUS_PIN GP28
-// #define SPLIT_HAND_PIN GP22
-
-// Auto Shift
-// #define NO_AUTO_SHIFT_ALPHA
-// #define AUTO_SHIFT_TIMEOUT TAPPING_TERM
-// #define AUTO_SHIFT_NO_SETUP
-
-// #undef LOCKING_SUPPORT_ENABLE
-// #undef LOCKING_RESYNC_ENABLE
-// #define NO_ACTION_ONESHOT
-//#define NO_ACTION_TAPPING
-//#define NO_MUSIC_MODE
-
-// #define COMBO_COUNT 1
 
 
 // RGB matrix support

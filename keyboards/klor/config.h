@@ -32,7 +32,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // │ s p l i t   c o m m u n i c a t i o n           │
 // └─────────────────────────────────────────────────┘
 
-// #define USE_SERIAL
+#define USE_SERIAL
 // #define SOFT_SERIAL_PIN D2
 // #define SERIAL_USE_MULTI_TRANSACTION
 // #define SERIAL_USART_FULL_DUPLEX
@@ -43,8 +43,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // #define SERIAL_USART_RX_PAL_MODE
 // #define USE_SERIAL
 
-// #define MASTER_LEFT
+#define MASTER_LEFT
 // #define MASTER_RIGHT
+
+// #define SPLIT_USB_DETECT
 
 // ┌─────────────────────────────────────────────────┐
 // │ e n c o d e r s                                 │

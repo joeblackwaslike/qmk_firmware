@@ -1,0 +1,4 @@
+{
+    "development_board": "elite_pi",
+    "pin_compatible": "elite_c"
+}
